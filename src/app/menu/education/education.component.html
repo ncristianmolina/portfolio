@@ -1,0 +1,80 @@
+<div id="education" class="education-section">
+  <h2>Mi Educación</h2>
+  <div class="education-container">
+    <!-- Tarjeta 1: Universidad -->
+    <div class="education-card">
+      <div class="education-image">
+        <img src="assets/educacion/utn.png" alt="UTN" />
+      </div>
+      <div class="education-description">
+        <h3>Universidad Tecnologica Nacional</h3>
+        <p>Tecnicatura en Programacion | 2024 - 2026</p>
+        <p>Durante mis estudios en la UTN, me encuentro especializandome en estructura de datos, patrones de diseño, inicializandome en JAVA, para luego adquirir conocimiento en Spring y Springboot.</p>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2: Full Stack -->
+    <div class="education-card">
+      <div class="education-image">
+        <img src="assets/educacion/udemy.png" alt="Curso Full Stack" />
+      </div>
+      <div class="education-description">
+        <h3>Curso de Desarrollo Web Full Stack</h3>
+        <p>Udemy | 2023</p>
+        <p>Aprendí a realizar proyectos utilizando HTML, CSS, JavaScript y Angular.</p>
+      </div>
+      <!-- Botón para ver el certificado -->
+      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/fullstack.jpg')">Ver Certificado</button>
+    </div>
+
+    <!-- Tarjeta 3: MaxiPrograma C# -->
+    <div class="education-card">
+      <div class="education-image">
+        <img src="assets/educacion/maxiprograma.png" alt="Curso C#" />
+      </div>
+      <div class="education-description">
+        <h3>Curso de C# .NET</h3>
+        <p>Maxi Programa | 2024</p>
+        <p>Conocimientos en C#. Creación de Aplicación de escritorio con WinForms y SQL Server.</p>
+      </div>
+      <!-- Botón para ver el certificado -->
+      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/c.sharp.jpg')">Ver Certificado</button>
+    </div>
+
+    <!-- Tarjeta 4: Base de Datos -->
+    <div class="education-card">
+      <div class="education-image">
+        <img src="assets/educacion/udemy.png" alt="Curso de Base de Datos" />
+      </div>
+      <div class="education-description">
+        <h3>Curso de Base de Datos</h3>
+        <p>Udemy | 2024</p>
+        <p>Aprendí Bases de Datos, Consultas, Funciones, Tablas y Permisos.</p>
+      </div>
+      <!-- Botón para ver el certificado -->
+      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/database.jpg')">Ver Certificado</button>
+    </div>
+
+    <!-- Tarjeta 5: GitHub -->
+    <div class="education-card">
+      <div class="education-image">
+        <img src="assets/educacion/udemy.png" alt="Curso GitHub" />
+      </div>
+      <div class="education-description">
+        <h3>Curso de Git y GitHub</h3>
+        <p>Udemy | 2024</p>
+        <p>Manejo de control de versiones, comando de GitHub y administracion de proyectos</p>
+      </div>
+      <!-- Botón para ver el certificado -->
+      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/github.jpg')">Ver Certificado</button>
+    </div>
+
+  </div>
+
+  <!-- Modal para mostrar imágenes -->
+  <div class="modal" (click)="closeModal($event)">
+    <img *ngIf="currentImage" [src]="currentImage" alt="Certificado" id="modal-image" />
+    <!-- Botón cerrar -->
+    <button class="close-btn" (click)="closeModal($event)">X</button>
+  </div>
+</div>

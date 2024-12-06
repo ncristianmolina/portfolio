@@ -1,0 +1,39 @@
+<div id="home" class="home-section">
+  <div class="content">
+    <div class="text">
+      <h1 class="fade-in">Hola ! Soy Cristian Molina, <br>¡y esto es lo que hago! </h1>
+      <p>Bienvenido a mi mundo</p>
+    </div>
+    <div class="image">
+      <img src="assets/perfil.png" alt="Cristian Molina" />
+    </div>
+  </div>
+
+  <!-- Sección de iconos debajo de la descripción -->
+  <div class="social-icons">
+    <a href="https://github.com/ncristianmolina" target="_blank">
+      <img src="assets/icons/github.png" alt="GitHub" />
+    </a>
+    <a href="https://www.linkedin.com/in/cristian-n-molina/" target="_blank">
+      <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+    </a>
+    <div class="copy-email" (click)="copyEmail()">
+      <img src="assets/icons/mail.png" alt="Correo Electrónico" />
+    </div>
+  </div>
+
+  <div class="scroll-down">
+    <a href="#aboutme">
+      <span>&#x2193;</span> <!-- Flecha hacia abajo -->
+    </a>
+  </div>
+</div>
+
+<!-- Sección About Me -->
+<app-aboutme></app-aboutme>
+
+<!-- Sección Projects -->
+<app-projects></app-projects>
+
+<!-- Sección Education -->
+<app-education></app-education>

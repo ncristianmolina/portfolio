@@ -1,0 +1,146 @@
+/* Estilos generales para el Home */
+.home-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+}
+
+.text h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.text p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
+
+/* Animación de entrada del texto */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.00);
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+/* Sección de iconos debajo de la descripción */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: -50px; /* Espacio entre la descripción y los iconos */
+}
+
+.social-icons a,
+.copy-email {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}
+
+/* Flecha de desplazamiento hacia abajo */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  animation: bounce 1.5s infinite;
+}
+
+.scroll-down a {
+  color: white;
+  text-decoration: none;
+}
+
+.scroll-down span {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+  }
+
+  .image img {
+    max-width: 80%;
+  }
+
+  .scroll-down {
+    bottom: 10px;
+  }
+}

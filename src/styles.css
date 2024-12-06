@@ -1,0 +1,35 @@
+/* Importa fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.main-container {
+  min-height: calc(100vh - 120px); /* Altura restante entre Navbar y Footer */
+  padding: 20px;
+}
+
+body {
+  background-image: url("../src/assets/darling.jpg");
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla sin distorsionarse */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Hace que la imagen se quede fija al hacer scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+@media (max-width: 480px) {
+  body {
+    background-position: center; /* Centra la imagen en la parte superior */
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+

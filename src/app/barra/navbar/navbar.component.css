@@ -1,0 +1,75 @@
+/* Navbar fijo en la parte superior */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Fondo translúcido */
+  color: white;
+  z-index: 999; /* Asegura que el navbar se superponga a otros elementos */
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para mayor contraste */
+  transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el fondo al pasar el mouse */
+}
+
+/* Estilo de la lista de elementos */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Espaciado entre los elementos del menú */
+nav ul li {
+  margin: 0 15px;
+}
+
+/* Estilo para los enlaces */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 8px 12px; /* Espaciado dentro del enlace */
+  transition: all 0.3s ease; /* Transición suave en el hover */
+}
+
+/* Efecto hover en los enlaces */
+nav ul li a:hover {
+  color: #00bcd4; /* Cambia el color a un azul brillante */
+  background-color: rgba(0, 188, 212, 0.2); /* Fondo sutil al pasar el mouse */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el enlace activo */
+nav ul li a.active {
+  color: #00bcd4; /* Color destacado */
+  font-weight: bold;
+  border-bottom: 2px solid #00bcd4; /* Subraya el enlace activo */
+}
+
+/* Añadir margen superior a las secciones para evitar que se tapen con el navbar */
+section {
+  margin-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Asegúrate de que se vean bien en pantallas pequeñas */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Coloca los elementos en columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Añade espacio vertical entre los enlaces */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+}

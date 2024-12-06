@@ -1,0 +1,49 @@
+footer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative; /* Permite que las imágenes estén encima del texto */
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las imágenes */
+  margin-bottom: 10px; /* Espacio entre las imágenes y el texto */
+}
+
+.footer-images a {
+  display: inline-block;
+}
+
+.footer-images img {
+  width: 50px; /* Ajusta el tamaño de las imágenes */
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+.footer-images img:hover {
+  transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}
+
+footer p {
+  margin-top: 0; /* Para que el texto esté más cerca de las imágenes */
+  font-size: 14px;
+}
+
+.copy-email {
+  cursor: pointer;
+}
+
+.copy-email img {
+  width: 50px; /* Ajusta el tamaño de la imagen del correo */
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.copy-email img:hover {
+  transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}

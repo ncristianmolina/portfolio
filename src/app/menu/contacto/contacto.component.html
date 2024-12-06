@@ -1,0 +1,26 @@
+<div id="contacto" class="contacto-section"></div>
+<form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/mrbgdage" method="POST">
+  <label for="name">Nombre:</label>
+  <input id="name" formControlName="name" name="name" type="text" />
+  <div *ngIf="contactoForm.controls['name'].invalid && contactoForm.controls['name'].touched">
+    Nombre es obligatorio.
+  </div>
+
+  <label for="email">Correo:</label>
+  <input id="email" formControlName="email" name="email" type="email" />
+  <div *ngIf="contactoForm.controls['email'].invalid && contactoForm.controls['email'].touched">
+    <div *ngIf="contactoForm.controls['email'].errors?.['required']">El correo es obligatorio.</div>
+    <div *ngIf="contactoForm.controls['email'].errors?.['email']">El correo debe ser válido.</div>
+  </div>
+
+  <label for="message">Mensaje:</label>
+  <textarea id="message" formControlName="message" name="message"></textarea>
+  <div *ngIf="contactoForm.controls['message'].invalid && contactoForm.controls['message'].touched">
+    <div *ngIf="contactoForm.controls['message'].errors?.['required']">El mensaje es obligatorio.</div>
+    <div *ngIf="contactoForm.controls['message'].errors?.['minlength']">
+      El mensaje debe tener al menos 10 caracteres.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!contactoForm.valid">Enviar</button>
+</form>

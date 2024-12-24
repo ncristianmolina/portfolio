@@ -1,75 +1,106 @@
-/* Navbar fijo en la parte superior */
+/* Navbar fijo */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Fondo translúcido */
+  background-color: rgba(0, 0, 0, 0.2); 
   color: white;
-  z-index: 999; /* Asegura que el navbar se superponga a otros elementos */
+  z-index: 999;
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para mayor contraste */
-  transition: background-color 0.3s ease; /* Transición suave para cambios de color */
-}
-
-nav:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Cambia el fondo al pasar el mouse */
-}
-
-/* Estilo de la lista de elementos */
-nav ul {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out; /* Añadimos transición para el movimiento */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto hover en el navbar */
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Lista de enlaces en el navbar */
+nav ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Espaciado entre los elementos del menú */
-nav ul li {
-  margin: 0 15px;
-}
-
-/* Estilo para los enlaces */
+/* Estilo de los enlaces */
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
-  padding: 8px 12px; /* Espaciado dentro del enlace */
-  transition: all 0.3s ease; /* Transición suave en el hover */
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
 }
 
-/* Efecto hover en los enlaces */
 nav ul li a:hover {
-  color: #00bcd4; /* Cambia el color a un azul brillante */
-  background-color: rgba(0, 188, 212, 0.2); /* Fondo sutil al pasar el mouse */
-  border-radius: 5px; /* Bordes redondeados */
+  color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.2);
+  border-radius: 5px;
 }
 
-/* Estilo para el enlace activo */
-nav ul li a.active {
-  color: #00bcd4; /* Color destacado */
-  font-weight: bold;
-  border-bottom: 2px solid #00bcd4; /* Subraya el enlace activo */
+/* Botón de menú hamburguesa */
+.navbar-toggle {
+  display: none; 
+  background-color: rgba(0, 188, 212, 0.8);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute; /* Asegura que el botón esté posicionado de forma independiente */
+  left: 10px; /* Mueve el botón a la izquierda */
+  top: 50%; /* Centra el botón verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrar perfectamente el botón */
 }
 
-/* Añadir margen superior a las secciones para evitar que se tapen con el navbar */
-section {
-  margin-top: 60px; /* Ajusta este valor según la altura de tu navbar */
-}
-
-/* Asegúrate de que se vean bien en pantallas pequeñas */
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column; /* Coloca los elementos en columna en pantallas pequeñas */
-    align-items: center;
+    display: none; 
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2); 
+    position: absolute;
+    top: 60px;
+    left: 0; /* Alinea el menú al borde izquierdo de la pantalla */
+    width: 100%; 
+    padding: 10px;
+    border-radius: 8px; 
+  }
+
+  nav ul.active {
+    display: flex; /* Mostrar el menú cuando está activo */
   }
 
   nav ul li {
-    margin-bottom: 10px; /* Añade espacio vertical entre los enlaces */
+    margin: 5px 0; 
   }
 
   nav ul li a {
-    font-size: 16px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    font-size: 16px; 
+    padding: 8px 10px;
   }
+
+  .navbar-toggle {
+    display: block; /* Mostrar el botón de toggle */
+  }
+}
+
+/* Navbar oculto en scroll down */
+nav.hidden {
+  transform: translateY(-100%); /* Mueve el navbar hacia arriba */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Navbar visible */
+nav {
+  transform: translateY(0); /* Mantiene el navbar en su lugar */
 }

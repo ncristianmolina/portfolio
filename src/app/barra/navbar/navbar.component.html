@@ -1,9 +1,10 @@
-<nav>
-  <ul>
+<nav [class.hidden]="!isNavbarVisible">
+  <button class="navbar-toggle" (click)="toggleMenu()">☰</button>
+  <ul [class.active]="isMenuOpen">
     <li><a (click)="scrollToSection('home')">Inicio</a></li>
     <li><a (click)="scrollToSection('aboutme')">Sobre mí</a></li>
     <li><a (click)="scrollToSection('projects')">Proyectos</a></li>
     <li><a (click)="scrollToSection('education')">Educación</a></li>
-    <li><a (click)="scrollToSection('contacto')">Contacto</a></li> <!-- Hacemos scroll a la sección contacto -->
+    <li><a (click)="scrollToSection('contacto')">Contacto</a></li>
   </ul>
 </nav>

@@ -1,6 +1,6 @@
 /* Sección de Educación */
 .education-section {
-  padding: 60px 20px;
+  padding: 40px 20px; /* Reduce el padding */
   background-color: transparent;
   text-align: center;
   color: white;
@@ -9,10 +9,23 @@
 /* Contenedor de las tarjetas */
 .education-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Define 3 columnas */
+  grid-template-columns: repeat(3, 1fr); /* Define 3 columnas para pantallas grandes */
   gap: 20px;
   margin-top: 30px;
-  grid-auto-rows: minmax(250px, auto); /* Asegura que las filas no sean demasiado pequeñas */
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-container {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    gap: 10px;
+  }
 }
 
 /* Tarjetas */
@@ -33,48 +46,59 @@
 /* Contenedor de la imagen */
 .education-image {
   width: 100%;
-  height: auto; /* Ajusta la altura de la imagen */
+  height: auto;
   display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 /* Estilo para la imagen */
 .education-image img {
-  width: 50%; /* La imagen ocupará todo el ancho del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: contain; /* La imagen no se recortará y se ajustará dentro del contenedor */
+  width: 50%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Descripción de la educación */
 .education-description {
-  padding: 10px 15px; /* Reduce el padding para que no haya tanto espacio */
+  padding: 10px 10px; /* Reduce el padding */
+  text-align: left;
 }
 
 .education-description h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 8px;
   color: black;
 }
 
 .education-description p {
-  font-size: 14px;
+  font-size: 12px;
   color: white;
-  margin-bottom: 10px; /* Reduce el margen inferior */
+  line-height: 1.4;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /* Propiedad para navegadores basados en WebKit */
+  display: box; /* Propiedad estándar */
+  -webkit-line-clamp: 3; /* Limita el texto a 3 líneas en navegadores WebKit */
+  line-clamp: 3; /* Propiedad estándar para futuros navegadores */
+  -webkit-box-orient: vertical; /* Orientación del contenido en WebKit */
+  box-orient: vertical; /* Propiedad estándar */
 }
+
 
 /* Botón para ver el certificado */
 .view-certificate-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 8px 16px;
+  background-color: #000000d0;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .view-certificate-btn:hover {

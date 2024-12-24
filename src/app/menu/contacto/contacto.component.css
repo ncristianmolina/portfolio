@@ -1,5 +1,6 @@
-/* contacto.component.css */
+/* Formulario de contacto */
 form {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 30px;
@@ -7,22 +8,10 @@ form {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-h2 {
-  text-align: center;
-  color: black;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: black;
-}
-
+/* Estilo de los campos de texto */
 input, textarea {
   width: 100%;
   padding: 12px;
@@ -32,6 +21,7 @@ input, textarea {
   font-size: 1rem;
   background-color: #f9f9f92a;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 input:focus, textarea:focus {
@@ -47,6 +37,37 @@ textarea {
   height: 150px;
 }
 
+/* Contenedor de cada campo de formulario para asegurar un espaciado uniforme */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre cada campo */
+}
+
+/* Estilos para el label */
+label {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: black;
+}
+
+/* Estilo para el h2 (centrado) */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los mensajes de error */
+div.ng-invalid.ng-touched, div.ng-invalid.ng-dirty {
+  color: red !important;
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+/* Botón */
 button {
   display: inline-block;
   width: 100%;
@@ -67,24 +88,53 @@ button:hover {
 }
 
 button:disabled {
-  background-color: #cccccccb;
+  background-color: #000000d0;
   cursor: not-allowed;
 }
 
-div.error-message {
-  font-size: 0.9rem;
-  color: red;
-  margin-top: -15px;
-  margin-bottom: 15px;
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustar el formulario */
+  form {
+    padding: 20px;
+    max-width: 100%; /* El formulario ocupa todo el ancho disponible */
+  }
+
+  /* Reducir el tamaño de los campos de entrada y texto */
+  input, textarea {
+    padding: 10px;
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+  }
+
+  /* Ajustar el tamaño del título */
+  h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  /* Ajustar el espaciado de los campos */
+  .form-group {
+    gap: 10px; /* Reducir el espacio entre campos */
+  }
+
+  /* Ajustar el botón */
+  button {
+    font-size: 1rem; /* Reducir el tamaño del texto del botón */
+    padding: 10px;
+  }
 }
 
-.contacto-section {
-  background-color: transparent;
-  padding: 50px 0;
-}
+/* Media Queries para dispositivos muy pequeños (teléfonos en orientación vertical) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem; /* Asegura que el título se ajuste en pantallas pequeñas */
+  }
 
-.contacto-section h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
+  input, textarea {
+    font-size: 0.85rem; /* Font-size aún más pequeño en pantallas muy pequeñas */
+  }
+
+  button {
+    font-size: 0.9rem; /* Reduce el tamaño del texto del botón */
+    padding: 10px 15px; /* Ajusta el padding */
+  }
 }

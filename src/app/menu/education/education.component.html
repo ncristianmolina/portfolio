@@ -1,80 +1,13 @@
-<div id="education" class="education-section">
-  <h2>Mi Educación</h2>
-  <div class="education-container">
-    <!-- Tarjeta 1: Universidad -->
-    <div class="education-card">
-      <div class="education-image">
-        <img src="assets/educacion/utn.png" alt="UTN" />
-      </div>
-      <div class="education-description">
-        <h3>Universidad Tecnologica Nacional</h3>
-        <p>Tecnicatura en Programacion | 2024 - 2026</p>
-        <p>Durante mis estudios en la UTN, me encuentro especializandome en estructura de datos, patrones de diseño, inicializandome en JAVA, para luego adquirir conocimiento en Spring y Springboot.</p>
-      </div>
-    </div>
-
-    <!-- Tarjeta 2: Full Stack -->
-    <div class="education-card">
-      <div class="education-image">
-        <img src="assets/educacion/udemy.png" alt="Curso Full Stack" />
-      </div>
-      <div class="education-description">
-        <h3>Curso de Desarrollo Web Full Stack</h3>
-        <p>Udemy | 2023</p>
-        <p>Aprendí a realizar proyectos utilizando HTML, CSS, JavaScript y Angular.</p>
-      </div>
-      <!-- Botón para ver el certificado -->
-      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/fullstack.jpg')">Ver Certificado</button>
-    </div>
-
-    <!-- Tarjeta 3: MaxiPrograma C# -->
-    <div class="education-card">
-      <div class="education-image">
-        <img src="assets/educacion/maxiprograma.png" alt="Curso C#" />
-      </div>
-      <div class="education-description">
-        <h3>Curso de C# .NET</h3>
-        <p>Maxi Programa | 2024</p>
-        <p>Conocimientos en C#. Creación de Aplicación de escritorio con WinForms y SQL Server.</p>
-      </div>
-      <!-- Botón para ver el certificado -->
-      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/c.sharp.jpg')">Ver Certificado</button>
-    </div>
-
-    <!-- Tarjeta 4: Base de Datos -->
-    <div class="education-card">
-      <div class="education-image">
-        <img src="assets/educacion/udemy.png" alt="Curso de Base de Datos" />
-      </div>
-      <div class="education-description">
-        <h3>Curso de Base de Datos</h3>
-        <p>Udemy | 2024</p>
-        <p>Aprendí Bases de Datos, Consultas, Funciones, Tablas y Permisos.</p>
-      </div>
-      <!-- Botón para ver el certificado -->
-      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/database.jpg')">Ver Certificado</button>
-    </div>
-
-    <!-- Tarjeta 5: GitHub -->
-    <div class="education-card">
-      <div class="education-image">
-        <img src="assets/educacion/udemy.png" alt="Curso GitHub" />
-      </div>
-      <div class="education-description">
-        <h3>Curso de Git y GitHub</h3>
-        <p>Udemy | 2024</p>
-        <p>Manejo de control de versiones, comando de GitHub y administracion de proyectos</p>
-      </div>
-      <!-- Botón para ver el certificado -->
-      <button class="view-certificate-btn" (click)="openModal('assets/educacion/certifications/github.jpg')">Ver Certificado</button>
-    </div>
-
+<section id="education" class="section" aria-labelledby="education-title" tabindex="-1">
+  <div class="section-heading"><div><p class="eyebrow">04 / Educación</p><h2 id="education-title">Aprender y llevarlo a la práctica.</h2></div></div>
+  <div class="education-list">
+    <article><div class="study-date">2024 — actualidad<span class="badge">En curso</span></div><div><h3>Tecnicatura Universitaria en Programación</h3><p>Universidad Tecnológica Nacional (UTN)</p></div></article>
+    <article><div class="study-date">2023<span class="study-type">Formación complementaria</span></div><div><h3>Full Stack Web Developer</h3><p>Mar del Plata Programa · UTN y ATICMA</p></div></article>
   </div>
-
-  <!-- Modal para mostrar imágenes -->
-  <div class="modal" (click)="closeModal($event)">
-    <img *ngIf="currentImage" [src]="currentImage" alt="Certificado" id="modal-image" />
-    <!-- Botón cerrar -->
-    <button class="close-btn" (click)="closeModal($event)">X</button>
-  </div>
-</div>
+  <details class="courses"><summary>Cursos completados con certificado <span aria-hidden="true">+</span></summary><p class="courses-note">Formación complementaria acreditada por los certificados disponibles. C# nivel 1 no equivale a una certificación completa en .NET.</p><ul>
+    <li><div><strong>Programación fullstack: JavaScript, Angular y Node</strong><span>Udemy · 2023</span></div><a class="text-link" href="assets/educacion/certifications/fullstack.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de fullstack en Udemy (nueva pestaña)">Certificado <span aria-hidden="true">↗</span></a></li>
+    <li><div><strong>C# · Nivel 1</strong><span>Maxi Programa · 2024</span></div><a class="text-link" href="assets/educacion/certifications/c.sharp.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de C# nivel 1 (nueva pestaña)">Certificado <span aria-hidden="true">↗</span></a></li>
+    <li><div><strong>SQL Server</strong><span>Udemy · 2024</span></div><a class="text-link" href="assets/educacion/certifications/database.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de SQL Server (nueva pestaña)">Certificado <span aria-hidden="true">↗</span></a></li>
+    <li><div><strong>Git y GitHub</strong><span>Udemy · 2024</span></div><a class="text-link" href="assets/educacion/certifications/github.jpg" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado de Git y GitHub (nueva pestaña)">Certificado <span aria-hidden="true">↗</span></a></li>
+  </ul></details>
+</section>

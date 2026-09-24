@@ -1,0 +1,21 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/my-portfolio/browser",
+  "rewrites": [
+    { "source": "/aboutme", "destination": "/" },
+    { "source": "/projects", "destination": "/" },
+    { "source": "/education", "destination": "/" },
+    { "source": "/contacto", "destination": "/" },
+    { "source": "/experiencia", "destination": "/" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/cv/CV_Cristian_Nahuel_Molina.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"CV_Cristian_Nahuel_Molina.pdf\"" }
+      ]
+    }
+  ]
+}
+

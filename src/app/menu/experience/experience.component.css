@@ -1,0 +1,14 @@
+.experience-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+.role{padding:26px;background:#13232f;border-bottom:1px solid var(--line)}
+.role h3{margin-top:24px;font-size:1.25rem}
+.company{color:var(--text);font-size:1.7rem;font-weight:650;margin-top:20px}
+.role>p:not(.company){font-size:.8rem}
+.date{margin-top:22px}
+.contributions{padding:26px}
+.intro{font-size:.9rem;margin-bottom:26px}
+.contribution{display:flex;gap:18px;padding-block:18px;border-top:1px solid var(--line)}
+.contribution>span{font:12px/2 monospace;color:var(--accent)}
+h4{margin:0 0 7px;font-size:.95rem;font-weight:600}
+.contribution p{font-size:.86rem}
+.private-note{font-size:.7rem;margin-top:22px;color:#a7bac6}
+@media(min-width:768px){.experience-card{display:grid;grid-template-columns:1fr 1.8fr}.role{border-bottom:0;border-right:1px solid var(--line);padding:34px}.contributions{padding:34px}}

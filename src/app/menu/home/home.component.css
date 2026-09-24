@@ -1,145 +1,20 @@
-/* Estilos generales para el Home */
-.home-section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-.content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.text {
-  flex: 1;
-  padding: 20px;
-}
-
-.text h1 {
-  font-size: 3rem;
-  margin: 0;
-  font-weight: 600;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-}
-
-.text p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  opacity: 0;
-  animation: fadeIn 2s 1s forwards;
-}
-
-/* Animación de entrada del texto */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.00); /* Elimina la propiedad 'border' */
-  transition: transform 0.3s ease;
-}
-
-.image img:hover {
-  transform: scale(1.1);
-}
-
-/* Sección de iconos debajo de la descripción */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: -50px; /* Espacio entre la descripción y los iconos */
-}
-
-.social-icons a,
-.copy-email {
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
-}
-
-/* Flecha de desplazamiento hacia abajo */
-.scroll-down {
-  position: absolute;
-  bottom: 20px;
-  font-size: 2rem;
-  animation: bounce 1.5s infinite;
-}
-
-.scroll-down a {
-  color: white;
-  text-decoration: none;
-}
-
-.scroll-down span {
-  display: inline-block;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text h1 {
-    font-size: 2.5rem;
-  }
-
-  .text p {
-    font-size: 1.2rem;
-  }
-
-  .image img {
-    max-width: 80%;
-  }
-
-  .scroll-down {
-    bottom: 10px;
-  }
-}
+.hero{padding-top:48px;display:grid;gap:36px}
+.hero-copy{min-width:0}
+h1{font-size:clamp(3rem,6.2vw,5.2rem);letter-spacing:-.025em;line-height:1.04}
+h1 span{color:var(--accent)}
+.hero-description{max-width:540px;margin-block:26px;font-size:1rem}
+.hero .eyebrow{font-size:.65rem;display:flex;align-items:center;gap:10px}
+.file-type{font-size:.62rem;opacity:.75}
+.hero-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:20px;font-size:.8rem;color:var(--muted)}
+.hero-links a{padding-block:8px}
+.portrait{margin:0;align-self:center;max-width:360px;width:100%;justify-self:center;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#102333}
+.portrait-image{padding-top:20px;background:linear-gradient(0deg,#102333 2%,#0b141b55 60%),url('/assets/hero-sky.webp') center/cover}
+.portrait img{width:100%;max-width:301px;margin-inline:auto;object-fit:contain}
+figcaption{padding:17px 20px;font-size:.7rem;display:flex;align-items:center;gap:9px;border-top:1px solid var(--line)}
+.coordinate{margin-left:auto;color:var(--muted);font-size:.6rem;letter-spacing:.12em}
+.hero-bottom{display:flex;flex-wrap:wrap;gap:20px 36px;padding-block:25px;font-size:.8rem}
+.hero-bottom p span{display:block;font-size:.58rem;letter-spacing:.13em;color:var(--muted);margin-bottom:4px}
+.hero-bottom p{color:var(--text)}
+.hero-bottom a{margin-left:auto;align-self:center;color:var(--muted)}
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);column-gap:65px;padding-top:76px}.hero-bottom{grid-column:1/-1;margin-top:30px}.portrait{margin-top:5px}}
+@media(max-width:899px){.portrait{max-width:280px}.portrait img{max-height:290px;width:auto}.hero-bottom{border-top:1px solid var(--line)}}

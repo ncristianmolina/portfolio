@@ -1,106 +1,11 @@
-/* Navbar fijo */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2); 
-  color: white;
-  z-index: 999;
-  padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease-in-out; /* Añadimos transición para el movimiento */
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Efecto hover en el navbar */
-nav:hover {
-  background-color: rgba(0, 0, 0, 0.5); 
-}
-
-/* Lista de enlaces en el navbar */
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Estilo de los enlaces */
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 8px 12px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #00bcd4;
-  background-color: rgba(0, 188, 212, 0.2);
-  border-radius: 5px;
-}
-
-/* Botón de menú hamburguesa */
-.navbar-toggle {
-  display: none; 
-  background-color: rgba(0, 188, 212, 0.8);
-  border: none;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  position: absolute; /* Asegura que el botón esté posicionado de forma independiente */
-  left: 10px; /* Mueve el botón a la izquierda */
-  top: 50%; /* Centra el botón verticalmente */
-  transform: translateY(-50%); /* Ajuste para centrar perfectamente el botón */
-}
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; 
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.2); 
-    position: absolute;
-    top: 60px;
-    left: 0; /* Alinea el menú al borde izquierdo de la pantalla */
-    width: 100%; 
-    padding: 10px;
-    border-radius: 8px; 
-  }
-
-  nav ul.active {
-    display: flex; /* Mostrar el menú cuando está activo */
-  }
-
-  nav ul li {
-    margin: 5px 0; 
-  }
-
-  nav ul li a {
-    font-size: 16px; 
-    padding: 8px 10px;
-  }
-
-  .navbar-toggle {
-    display: block; /* Mostrar el botón de toggle */
-  }
-}
-
-/* Navbar oculto en scroll down */
-nav.hidden {
-  transform: translateY(-100%); /* Mueve el navbar hacia arriba */
-  transition: transform 0.3s ease-in-out; /* Transición suave */
-}
-
-/* Navbar visible */
-nav {
-  transform: translateY(0); /* Mantiene el navbar en su lugar */
-}
+header{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:#0b141bf5}
+nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;position:relative}
+.brand{font-size:2rem;font-weight:750;letter-spacing:-.1em;line-height:1}
+.brand span{color:var(--accent)}
+ul{display:none;position:absolute;top:100%;left:-20px;right:-20px;list-style:none;margin:0;padding:16px 20px;background:var(--bg);border-bottom:1px solid var(--line)}
+ul.open{display:flex;flex-direction:column}
+li a{display:block;padding:12px;font-size:.85rem;color:var(--muted)}
+li a:hover{color:var(--accent)}
+.nav-contact{color:var(--accent)!important}
+.menu-toggle{display:flex;align-items:center;gap:14px;min-height:44px;background:none;border:1px solid var(--line);border-radius:5px;color:var(--text);padding:8px 14px;font-size:.85rem}
+@media(min-width:768px){.menu-toggle{display:none}ul,ul.open{position:static;display:flex;flex-direction:row;align-items:center;gap:15px;padding:0;border:0;background:none}.nav-contact{border:1px solid var(--line);border-radius:5px;margin-left:10px}}

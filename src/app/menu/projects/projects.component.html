@@ -1,53 +1,24 @@
-<div id="projects" class="projects-section">
-  <h2>Mis Proyectos</h2>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#aboutme">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-      </ul>
-    </nav>
-  
-    <!-- Sección de proyectos -->
-    <div class="projects-container">
-      <!-- Tarjeta de proyecto -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/projects/RealState.PNG" alt="RealState" />
-        </div>
-        <div class="project-description">
-          <h3>Real State</h3>
-          <p>Web inmobiliaria moderna, relaciona a la venta de inmuebles. Realizado para utilizar lo aprendido en programacion Frontend.<br> Incluyendo HTML, CSS y JavaScript.</p>
-        </div>
-        <div class="project-link">
-          <a href="https://github.com/ncristianmolina/realState-project" target="_blank">Ver en GitHub</a>
-        </div>
-      </div>
-  
-      <!-- Tarjeta de proyecto -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="assets/projects/.net.png" alt=".NET" />
-        </div>
-        <div class="project-description">
-          <h3>Tienda Ecommerce</h3>
-          <p>Creacion de aplicacion de escriotrio con WinForms en .NET y SQL SERVER<br>ACTUALMENTE EN CURSO</p>
-        </div>
-        <div class="project-link">
-          <a href="https://github.com/ncristianmolina" target="_blank">Ver en GitHub</a>
-        </div>
-      </div>
-  
-      <!-- Agregar más tarjetas de proyectos aquí -->
+<section id="projects" class="section" aria-labelledby="projects-title" tabindex="-1">
+  <div class="section-heading"><div><p class="eyebrow">02 / Proyectos seleccionados</p><h2 id="projects-title">De la práctica al producto.</h2></div><p>TurnApp, un producto en construcción; HiveRH, una API académica en equipo. Y proyectos para seguir aprendiendo.</p></div>
+  <article class="featured-project">
+    <div class="project-copy"><span class="badge"><span class="dot" aria-hidden="true"></span> Proyecto personal · En desarrollo</span><h3>TurnApp<span aria-hidden="true">↗</span></h3><p class="project-subtitle">Gestión de turnos para empresas y sucursales.</p><p>Un SaaS pensado para organizar la gestión de turnos en negocios con múltiples empresas y sucursales. Actualmente trabajo en su arquitectura y backend.</p>
+      <ul class="tags" aria-label="Tecnologías de TurnApp"><li>Java 21</li><li>Spring Boot</li><li>JPA / Hibernate</li><li>PostgreSQL</li><li>Maven</li><li>Docker</li></ul>
+      <div class="project-status"><p><strong>Hoy</strong> Arquitectura y backend en desarrollo.</p><p><strong>Próximo paso</strong> Frontend en Angular, previsto.</p></div>
+      <a class="text-link" routerLink="/" fragment="contacto">Conversar sobre el proyecto <span aria-hidden="true">↗</span></a>
     </div>
-  
-    <!-- Scroll -->
-    <div class="scroll-down">
-      <a href="#education">
-        <span>&#x2193;</span> <!-- Flecha hacia abajo -->
-      </a>
+    <div class="architecture" aria-label="Esquema de la arquitectura prevista de TurnApp">
+      <p class="diagram-label">TURNAPP / ARQUITECTURA PREVISTA</p>
+      <div class="diagram-node planned"><span class="node-icon" aria-hidden="true">&lt;/&gt;</span><div><strong>Angular</strong><small>Frontend previsto</small></div><span class="node-status">Próximo</span></div>
+      <div class="connector" aria-hidden="true"></div>
+      <div class="diagram-node"><span class="node-icon" aria-hidden="true">&#123; &#125;</span><div><strong>Java + Spring Boot</strong><small>Backend en desarrollo</small></div></div>
+      <div class="connector" aria-hidden="true"></div>
+      <div class="diagram-node"><span class="node-icon" aria-hidden="true">DB</span><div><strong>PostgreSQL</strong><small>Persistencia con JPA / Hibernate</small></div></div>
+      <p class="diagram-footnote">Diseñado para múltiples empresas y sucursales.<br>Esquema técnico; no es una captura del producto.</p>
     </div>
+  </article>
+  <app-hiverh />
+  <div class="learning-projects">
+    <app-learning-project title="El clima ahora" area="Frontend" symbol="☀" description="Aplicación de consulta del clima con consumo de una API. Práctica de JavaScript, actualización de información en la interfaz y estilos con Bootstrap." [technologies]="['JavaScript', 'API de clima', 'Bootstrap']" repository="https://github.com/ncristianmolina/OpenWeatherMapMDP" />
+    <app-learning-project title="Blog con PHP y MySQL" area="Backend" symbol="&lt;?&gt;" description="Práctica de backend con sesiones de usuario, creación y edición de entradas, categorías y búsqueda. Proyecto de aprendizaje con mejoras de seguridad pendientes." [technologies]="['PHP', 'MySQL', 'HTML / CSS']" repository="https://github.com/ncristianmolina/blogPhp" />
   </div>
-  
+</section>

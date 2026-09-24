@@ -1,10 +1,13 @@
-<nav [class.hidden]="!isNavbarVisible">
-  <button class="navbar-toggle" (click)="toggleMenu()">☰</button>
-  <ul [class.active]="isMenuOpen">
-    <li><a (click)="scrollToSection('home')">Inicio</a></li>
-    <li><a (click)="scrollToSection('aboutme')">Sobre mí</a></li>
-    <li><a (click)="scrollToSection('projects')">Proyectos</a></li>
-    <li><a (click)="scrollToSection('education')">Educación</a></li>
-    <li><a (click)="scrollToSection('contacto')">Contacto</a></li>
-  </ul>
-</nav>
+<header>
+  <nav class="container" aria-label="Navegación principal" (keydown.escape)="isMenuOpen = false; menuButton.focus()">
+    <a class="brand" routerLink="/" fragment="home" aria-label="Cristian Molina, inicio" (click)="isMenuOpen = false">cm<span>.</span></a>
+    <button #menuButton class="menu-toggle" type="button" [attr.aria-expanded]="isMenuOpen" aria-controls="navigation" (click)="isMenuOpen = !isMenuOpen">{{ isMenuOpen ? 'Cerrar' : 'Menú' }} <span aria-hidden="true">{{ isMenuOpen ? '×' : '☰' }}</span></button>
+    <ul id="navigation" [class.open]="isMenuOpen">
+      <li><a routerLink="/" fragment="experiencia" (click)="isMenuOpen = false">Experiencia</a></li>
+      <li><a routerLink="/" fragment="projects" (click)="isMenuOpen = false">Proyectos</a></li>
+      <li><a routerLink="/" fragment="aboutme" (click)="isMenuOpen = false">Sobre mí</a></li>
+      <li><a routerLink="/" fragment="education" (click)="isMenuOpen = false">Educación</a></li>
+      <li><a class="nav-contact" routerLink="/" fragment="contacto" (click)="isMenuOpen = false">Hablemos <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+</header>

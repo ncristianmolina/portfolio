@@ -1,24 +1,26 @@
 <section id="projects" class="section" aria-labelledby="projects-title" tabindex="-1">
-  <div class="section-heading"><div><p class="eyebrow">02 / Proyectos seleccionados</p><h2 id="projects-title">De la práctica al producto.</h2></div><p>TurnApp, un producto en construcción; HiveRH, una API académica en equipo. Y proyectos para seguir aprendiendo.</p></div>
-  <article class="featured-project">
-    <div class="project-copy"><span class="badge"><span class="dot" aria-hidden="true"></span> Proyecto personal · En desarrollo</span><h3>TurnApp<span aria-hidden="true">↗</span></h3><p class="project-subtitle">Gestión de turnos para empresas y sucursales.</p><p>Un SaaS pensado para organizar la gestión de turnos en negocios con múltiples empresas y sucursales. Actualmente trabajo en su arquitectura y backend.</p>
-      <ul class="tags" aria-label="Tecnologías de TurnApp"><li>Java 21</li><li>Spring Boot</li><li>JPA / Hibernate</li><li>PostgreSQL</li><li>Maven</li><li>Docker</li></ul>
-      <div class="project-status"><p><strong>Hoy</strong> Arquitectura y backend en desarrollo.</p><p><strong>Próximo paso</strong> Frontend en Angular, previsto.</p></div>
-      <a class="text-link" routerLink="/" fragment="contacto">Conversar sobre el proyecto <span aria-hidden="true">↗</span></a>
+  <div class="section-heading"><div><p class="eyebrow">02 / Proyectos seleccionados</p><h2 id="projects-title">Del dominio a la implementación.</h2></div><p>Un proyecto personal en desarrollo y una API académica en equipo. Dos contextos para trabajar con reglas de negocio.</p></div>
+  <article class="featured-project" aria-labelledby="turnapp-title">
+    <div class="project-copy">
+      <p class="eyebrow">Proyecto personal</p><h3 id="turnapp-title">TurnApp</h3>
+      <p class="project-subtitle">Turnos para empresas y sucursales.</p>
+      <p>Un SaaS pensado para organizar turnos en negocios con múltiples empresas y sucursales. Trabajo en el diseño de su arquitectura y en la construcción del backend.</p>
+      <ul class="tags" aria-label="Tecnologías principales de TurnApp"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li></ul>
+      <p class="project-status"><strong>En desarrollo:</strong> arquitectura y backend.<br>Frontend Angular previsto.</p>
     </div>
-    <div class="architecture" aria-label="Esquema de la arquitectura prevista de TurnApp">
-      <p class="diagram-label">TURNAPP / ARQUITECTURA PREVISTA</p>
-      <div class="diagram-node planned"><span class="node-icon" aria-hidden="true">&lt;/&gt;</span><div><strong>Angular</strong><small>Frontend previsto</small></div><span class="node-status">Próximo</span></div>
-      <div class="connector" aria-hidden="true"></div>
-      <div class="diagram-node"><span class="node-icon" aria-hidden="true">&#123; &#125;</span><div><strong>Java + Spring Boot</strong><small>Backend en desarrollo</small></div></div>
-      <div class="connector" aria-hidden="true"></div>
-      <div class="diagram-node"><span class="node-icon" aria-hidden="true">DB</span><div><strong>PostgreSQL</strong><small>Persistencia con JPA / Hibernate</small></div></div>
-      <p class="diagram-footnote">Diseñado para múltiples empresas y sucursales.<br>Esquema técnico; no es una captura del producto.</p>
-    </div>
+    <details class="technical-details">
+      <summary>Ver enfoque técnico de TurnApp</summary>
+      <div class="architecture" aria-label="Esquema de la arquitectura prevista de TurnApp">
+        <p class="diagram-label">Arquitectura prevista</p>
+        <div class="diagram-node planned"><strong>Angular</strong><span>Interfaz prevista</span></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="diagram-node"><strong>Java + Spring Boot</strong><span>Backend en desarrollo</span></div>
+        <div class="connector" aria-hidden="true">↓</div>
+        <div class="diagram-node"><strong>PostgreSQL</strong><span>Persistencia con JPA / Hibernate</span></div>
+        <p class="diagram-footnote">Diseño para múltiples empresas y sucursales. Maven y Docker forman parte del entorno técnico. Esquema conceptual del proyecto en desarrollo.</p>
+      </div>
+    </details>
   </article>
   <app-hiverh />
-  <div class="learning-projects">
-    <app-learning-project title="El clima ahora" area="Frontend" symbol="☀" description="Aplicación de consulta del clima con consumo de una API. Práctica de JavaScript, actualización de información en la interfaz y estilos con Bootstrap." [technologies]="['JavaScript', 'API de clima', 'Bootstrap']" repository="https://github.com/ncristianmolina/OpenWeatherMapMDP" />
-    <app-learning-project title="Blog con PHP y MySQL" area="Backend" symbol="&lt;?&gt;" description="Práctica de backend con sesiones de usuario, creación y edición de entradas, categorías y búsqueda. Proyecto de aprendizaje con mejoras de seguridad pendientes." [technologies]="['PHP', 'MySQL', 'HTML / CSS']" repository="https://github.com/ncristianmolina/blogPhp" />
-  </div>
+  <app-other-work />
 </section>

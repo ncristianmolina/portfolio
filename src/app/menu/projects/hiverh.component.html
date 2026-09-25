@@ -1,11 +1,12 @@
 <article class="hive-card" aria-labelledby="hiverh-title">
-  <div class="hive-intro"><span class="badge">Trabajo académico en equipo</span><h3 id="hiverh-title">HiveRH</h3><p class="subtitle">Una API REST para la gestión interna de recursos humanos.</p><p>Participé en el desarrollo grupal de un MVP académico para organizar empleados y procesos de RR. HH.: estructura organizacional, licencias, vacaciones, certificados y liquidaciones de sueldo.</p><p class="team-note">Trabajo en equipo sobre un dominio de negocio, persistencia relacional, autenticación y reglas de acceso.</p>
-    <ul class="tags" aria-label="Tecnologías de HiveRH"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>MySQL</li><li>JWT</li><li>Swagger / OpenAPI</li></ul>
+  <div class="hive-intro"><p class="eyebrow">Trabajo académico en equipo</p><h3 id="hiverh-title">HiveRH</h3><p class="subtitle">Una API REST para ordenar procesos de RR. HH.</p><p>Participé en el desarrollo grupal de un MVP académico: una API para gestionar empleados, estructura organizacional, licencias, vacaciones, certificados y liquidaciones de sueldo.</p>
+    <ul class="tags" aria-label="Tecnologías principales de HiveRH"><li>Java</li><li>Spring Boot</li><li>MySQL</li></ul>
+    <p class="project-status"><strong>API implementada · Producción prevista.</strong><br>Frontend Angular previsto como parte de la cursada.</p>
     <a class="text-link" href="https://github.com/ncristianmolina/HiveRH/tree/main" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de HiveRH, rama main (nueva pestaña)">Ver repositorio de HiveRH <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="hive-details"><p class="eyebrow">Del dominio a la API</p>
-    <div><h4>Modelado y persistencia</h4><p>Entidades relacionadas para empleados, sucursales, departamentos y puestos. Módulos organizados por funcionalidad, con controladores, servicios, repositorios y DTOs.</p></div>
-    <div><h4>Autenticación y acceso</h4><p>JWT con Spring Security. Roles ADMIN, RRHH y EMPLOYEE, y comprobaciones de acceso a recursos propios, como las liquidaciones de un empleado.</p></div>
-    <div><h4>Reglas y contratos</h4><p>Validaciones de negocio, como evitar dos liquidaciones para un empleado en el mismo mes. Endpoints documentados con Swagger/OpenAPI.</p></div>
-  </div>
+  <dl class="hive-details">
+    <div><dt>Dominio y persistencia</dt><dd>Relaciones entre empleados, sucursales, departamentos y puestos con Spring Data JPA.</dd></div>
+    <div><dt>Autenticación y acceso</dt><dd>JWT con Spring Security: roles ADMIN, RRHH y EMPLOYEE, más comprobaciones de acceso a recursos propios.</dd></div>
+    <div><dt>Reglas de negocio</dt><dd>Validaciones como evitar dos liquidaciones del mismo empleado en un mismo mes. Contratos documentados con Swagger / OpenAPI.</dd></div>
+  </dl>
 </article>

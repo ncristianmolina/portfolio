@@ -1,2 +1,12 @@
-.hive-card{margin-top:24px;border:1px solid #365464;border-radius:10px;overflow:hidden;background:var(--panel)}.hive-intro,.hive-details{padding:26px}.hive-intro h3{font-size:2.5rem;letter-spacing:-.04em;margin:22px 0 6px}.subtitle{color:var(--text);font-size:1rem;margin-bottom:14px}.hive-intro>p:not(.subtitle){font-size:.87rem}.team-note{margin-top:18px}.hive-intro .text-link{margin-top:24px}.hive-details{border-top:1px solid var(--line);background:#0d1922}.hive-details>div{padding-block:18px;border-top:1px solid var(--line)}h4{font-size:.9rem;margin:0 0 8px}.hive-details p:not(.eyebrow){font-size:.8rem}
-@media(min-width:768px){.hive-card{display:grid;grid-template-columns:1.2fr 1fr}.hive-intro,.hive-details{padding:36px}.hive-details{border-top:0;border-left:1px solid var(--line)}}
+.hive-card{margin-top:24px;border:1px solid #365464;border-radius:10px;overflow:hidden;background:var(--panel)}
+.hive-intro,.hive-details{padding:24px}
+.hive-intro .eyebrow{margin-bottom:8px}
+.hive-intro h3{font-size:2.5rem;letter-spacing:-.04em;margin:0 0 10px}
+.subtitle{color:var(--text);font-size:1.125rem;margin-bottom:16px}
+.project-status{margin-top:24px}
+.hive-intro .text-link{margin-top:20px}
+.hive-details{margin:0;border-top:1px solid var(--line);background:#0d1922}
+.hive-details>div+div{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+dt{font-size:1.125rem;font-weight:600;color:var(--text)}
+dd{font-size:1rem;margin:8px 0 0;color:var(--muted)}
+@media(min-width:960px){.hive-card{display:grid;grid-template-columns:1.2fr 1fr}.hive-intro,.hive-details{padding:36px}.hive-details{border-top:0;border-left:1px solid var(--line)}}

@@ -1,10 +1,9 @@
-import { RouterLink } from '@angular/router';
 import { Component } from '@angular/core';
 import { HiverhComponent } from './hiverh.component';
-import { LearningProjectComponent } from './learning-project.component';
+import { OtherWorkComponent } from './other-work.component';
 @Component({
   selector: 'app-projects', standalone: true,
-  imports: [RouterLink, HiverhComponent, LearningProjectComponent],
+  imports: [HiverhComponent, OtherWorkComponent],
   templateUrl: './projects.component.html', styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {}

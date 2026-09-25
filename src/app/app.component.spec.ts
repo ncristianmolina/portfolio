@@ -28,6 +28,9 @@ describe('Portfolio navigation', () => {
     const downloads = page.querySelectorAll<HTMLAnchorElement>('a[download]');
     expect(downloads.length).toBe(2);
     downloads.forEach(link => expect(link.getAttribute('href')).toBe('assets/cv/CV_Cristian_Nahuel_Molina.pdf'));
-    expect(page.querySelector('form')).toBeNull();
+    const form = page.querySelector('form')!;
+    expect(form.action).toBe('https://formspree.io/f/xnnnnlzg');
+    expect(form.method).toBe('post');
+    expect(form.checkValidity()).toBeFalse();
   });
 });

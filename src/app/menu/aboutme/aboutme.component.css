@@ -1,9 +1,9 @@
-.about-intro{display:grid;gap:26px;margin-bottom:40px}.about-intro p{font-size:.9rem}.about-intro p+p{margin-top:18px}.about-intro .eyebrow{font-size:.72rem}
+.about-intro{display:grid;gap:26px;margin-bottom:40px}.about-intro p{font-size:1rem}.about-intro p+p{margin-top:18px}.about-intro .eyebrow{font-size:.875rem}
 .skills-grid{display:grid;gap:1px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--line)}
 .skills-grid article{padding:26px;background:var(--bg)}
 .skill-number{font:12px monospace;color:var(--accent)}
 .skills-grid h3{margin:15px 0 24px}
-.skills-grid p{font-size:.8rem;margin-top:16px}
-.context{display:block;color:var(--accent);font-size:.65rem;margin-bottom:5px}
+.skills-grid p{font-size:1rem;margin-top:16px}
+.context{display:block;color:var(--accent);font-size:.875rem;margin-bottom:5px}
 @media(min-width:600px){.skills-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1000px){.about-intro{grid-template-columns:1fr 1.1fr;gap:80px}.skills-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1000px){.about-intro{grid-template-columns:1fr 1.1fr;gap:80px}}

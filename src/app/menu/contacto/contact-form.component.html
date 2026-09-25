@@ -1,0 +1,16 @@
+<section id="formulario" class="form-section" aria-labelledby="form-title" tabindex="-1">
+  <div class="form-intro">
+    <p class="eyebrow">Contacto directo</p>
+    <h3 id="form-title">Dejame tu mensaje.</h3>
+    <p>Contame sobre la oportunidad, tu equipo o el proyecto que querés desarrollar. Te respondo al email que indiques.</p>
+  </div>
+  <form #contactForm action="https://formspree.io/f/xnnnnlzg" method="POST" (submit)="submit($event, contactForm)" [attr.aria-busy]="state === 'sending'" aria-labelledby="form-title" aria-describedby="form-note">
+    <div class="field"><label for="contact-name">Nombre</label><input id="contact-name" name="name" type="text" autocomplete="name" required maxlength="100" [readOnly]="state === 'sending'"></div>
+    <div class="field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" [readOnly]="state === 'sending'"></div>
+    <div class="field message"><label for="contact-message">Mensaje</label><textarea id="contact-message" name="message" rows="6" required maxlength="5000" placeholder="Me gustaría conversar sobre…" [readOnly]="state === 'sending'"></textarea></div>
+    <p id="form-note">Todos los campos son obligatorios. El mensaje se procesa a través de Formspree.</p>
+    <button class="button button-primary" type="submit" [disabled]="state === 'sending'">{{ state === 'sending' ? 'Enviando…' : 'Enviar mensaje' }} <span aria-hidden="true">↗</span></button>
+    <div class="form-feedback" role="status" aria-live="polite" aria-atomic="true">@if (state === 'success') {<p class="success">¡Mensaje enviado con éxito! Gracias por escribirme. Te respondo al email que indicaste.</p>}</div>
+    <div class="form-feedback" role="alert" aria-atomic="true">@if (state === 'error') {<p class="error">No pudimos confirmar el envío. Tus datos siguen en el formulario: intentá de nuevo o escribime a <a href="mailto:ncristian.molina@gmail.com">ncristian.molina&#64;gmail.com</a>.</p>}</div>
+  </form>
+</section>

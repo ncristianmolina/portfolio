@@ -18,8 +18,8 @@ Salida de producción: `dist/my-portfolio/browser`.
 ## Despliegue
 
 `vercel.json` configura build, salida, rutas antiguas y descarga del PDF.
-El despliegue anterior ya está publicado en https://cristianmolina.vercel.app/.
-La rama main contiene la versión preparada para el despliegue automático de Vercel.
+El sitio está publicado en https://cristianmolina.vercel.app/.
+La rama main activa el despliegue automático de Vercel.
 
 Las rutas anteriores `/aboutme`, `/projects`, `/education`, `/contacto` y `/experiencia` redirigen a las secciones de la portada.
 Al cambiar de dominio, actualizar canonical, Open Graph, Twitter, robots y sitemap.
@@ -81,7 +81,7 @@ El CV recibido no menciona HiveRH y mantiene una referencia genérica a otros pr
 
 ## Validación de esta pasada
 
-- Producción: compilación correcta, sin advertencias. Bundle inicial 276,10 kB; transferencia estimada 75,20 kB, sin assets.
+- Producción: compilación correcta, sin advertencias. Bundle inicial 281,90 kB; transferencia estimada 76,82 kB, sin assets.
 - Pruebas: 16 correctas en ChromeHeadless, incluyendo envío asíncrono, navegación, CV/formulario, menú, desplazamiento suave, movimiento reducido y restauración de posición.
 - Navegador real: 320, 375, 390, 768, 1024 y 1440 px. Sin desbordamiento horizontal, también con esquema y certificados desplegados y con el formulario presente.
 - Párrafos de experiencia, proyectos y nodos del esquema: 16 px. Descripción de portada: 18 px. Etiquetas y textos secundarios: al menos 14 px.
@@ -96,6 +96,8 @@ El CV recibido no menciona HiveRH y mantiene una referencia genérica a otros pr
 En escritorio, Rubicom muestra seis áreas en tres columnas (dos en tablet y una en móvil), con encabezado y stack a todo el ancho. HiveRH usa columnas; el esquema de TurnApp desplegado muestra tres nodos en fila. En móvil se apilan, los botones del hero quedan juntos, las habilidades pasan a una columna y los campos del formulario ocupan el ancho disponible.
 
 ## Archivos de esta pasada
+
+Actualización del retrato (25 de septiembre): nueva foto proporcionada por Cristian, fondo azul oscuro con acento celeste y marco integrado. WebP de 720 × 900 px (37,13 kB), carga prioritaria con `NgOptimizedImage` y dimensiones explícitas. Menú e inicio con controles táctiles de 48 px. Ver [prompt y detalles de edición](docs/portrait-edit.md). Se mantiene la identidad visual y Angular 18.2. Verificado en 320, 390, 768 y 1280 px, sin desbordamiento; compilación y 16 pruebas correctas.
 
 - `src/styles.css` y estilos de navbar/footer: tamaños, controles y espaciado.
 - `src/app/menu/home`, `experience`, `aboutme` y `education`: portada, legibilidad y contenido.

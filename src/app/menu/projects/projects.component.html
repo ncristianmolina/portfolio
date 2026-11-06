@@ -1,26 +1,48 @@
 <section id="projects" class="section" aria-labelledby="projects-title" tabindex="-1">
-  <div class="section-heading"><div><p class="eyebrow">02 / Proyectos seleccionados</p><h2 id="projects-title">Del dominio a la implementación.</h2></div><p>Un proyecto personal en desarrollo y una API académica en equipo. Dos contextos para trabajar con reglas de negocio.</p></div>
+  <header class="section-heading">
+    <div>
+      <p class="eyebrow">02 / Proyectos seleccionados</p>
+      <h2 id="projects-title">Software en práctica</h2>
+    </div>
+    <p>Dos proyectos con reglas de negocio propias, desde el modelo de datos hasta la API.</p>
+  </header>
+
   <article class="featured-project" aria-labelledby="turnapp-title">
     <div class="project-copy">
-      <p class="eyebrow">Proyecto personal</p><h3 id="turnapp-title">TurnApp</h3>
-      <p class="project-subtitle">Turnos para empresas y sucursales.</p>
-      <p>Un SaaS pensado para organizar turnos en negocios con múltiples empresas y sucursales. Trabajo en el diseño de su arquitectura y en la construcción del backend.</p>
-      <ul class="tags" aria-label="Tecnologías principales de TurnApp"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li></ul>
-      <p class="project-status"><strong>En desarrollo:</strong> arquitectura y backend.<br>Frontend Angular previsto.</p>
+      <p class="eyebrow">01 / Proyecto personal</p>
+      <h3 id="turnapp-title">TurnApp</h3>
+      <p class="project-subtitle">Gestión de turnos para empresas y sucursales.</p>
+      <p>Diseño una arquitectura SaaS para organizar turnos en negocios con múltiples empresas y sucursales. Estoy construyendo el backend con Java y Spring Boot, con PostgreSQL para la persistencia y Angular previsto para la interfaz.</p>
+      <ul class="tags" aria-label="Tecnologías de TurnApp">
+        <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Angular previsto</li>
+      </ul>
     </div>
+
+    <figure class="project-illustration">
+      <svg viewBox="0 0 350 200" fill="none" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 144l9-101q1-7 8-7l154 3q7 0 7 7l3 100M20 144l-9 12q-3 8 8 9l182 1q13-1 14-10l-14-10z"/>
+          <path d="M39 49l145 2 2 81-153-2zM94 146l-4 6 46 1-5-7"/>
+          <path d="M57 74l105 1 1 40-106-2zM57 85l105 1M76 67v12m69-11v12m-63 7-1 26m29-26v26m27-26v27"/>
+          <path d="M205 83c25-9 39-9 64 0m-8-8 11 9-13 4" class="sketch-accent"/>
+          <path d="M285 75c-1-7 13-11 27-11 15 0 27 5 27 11s-12 11-27 11c-14 0-27-5-27-11zM285 75v36c0 6 13 11 27 11 15 0 27-5 27-11V75m-54 12c0 6 13 11 27 11 15 0 27-5 27-11m-54 12c0 6 13 11 27 11 15 0 27-5 27-11"/>
+          <path d="M88 99l7 5 9-12m57-70 15-8m-5 20 16-2" class="sketch-accent"/>
+        </g>
+      </svg>
+      <figcaption>Turnos y persistencia · Esquema conceptual</figcaption>
+    </figure>
+
     <details class="technical-details">
       <summary>Ver enfoque técnico de TurnApp</summary>
-      <div class="architecture" aria-label="Esquema de la arquitectura prevista de TurnApp">
-        <p class="diagram-label">Arquitectura prevista</p>
-        <div class="diagram-node planned"><strong>Angular</strong><span>Interfaz prevista</span></div>
-        <div class="connector" aria-hidden="true">↓</div>
-        <div class="diagram-node"><strong>Java + Spring Boot</strong><span>Backend en desarrollo</span></div>
-        <div class="connector" aria-hidden="true">↓</div>
-        <div class="diagram-node"><strong>PostgreSQL</strong><span>Persistencia con JPA / Hibernate</span></div>
-        <p class="diagram-footnote">Diseño para múltiples empresas y sucursales. Maven y Docker forman parte del entorno técnico. Esquema conceptual del proyecto en desarrollo.</p>
-      </div>
+      <dl class="architecture">
+        <div><dt>Interfaz prevista</dt><dd>Angular</dd></div>
+        <div><dt>Backend en desarrollo</dt><dd>Java y Spring Boot</dd></div>
+        <div><dt>Persistencia</dt><dd>PostgreSQL, JPA y Hibernate</dd></div>
+      </dl>
+      <p>Maven y Docker forman parte del entorno técnico.</p>
     </details>
   </article>
+
   <app-hiverh />
   <app-other-work />
 </section>

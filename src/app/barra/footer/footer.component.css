@@ -1,1 +1,21 @@
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 28px;padding-block:27px;border-top:1px solid var(--line);font-size:.875rem}a{min-height:44px;padding-block:10px;color:var(--accent)}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  border-top: 1px solid var(--line);
+  padding-block: 20px;
+  font-size: .875rem;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--accent);
+  font-weight: 650;
+}
+
+a:hover { text-decoration: underline; text-underline-offset: .26em; }

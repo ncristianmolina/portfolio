@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b141b"/><text x="8" y="43" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#edf2f5">cm</text><circle cx="54" cy="45" r="4" fill="#7bdded"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="9" fill="#dfe8dd"/>
+  <text x="7" y="43" font-family="Georgia,serif" font-size="34" font-weight="bold" fill="#232a27">cm</text>
+  <circle cx="55" cy="43" r="3.5" fill="#8d3f32"/>
+</svg>
